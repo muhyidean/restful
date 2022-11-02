@@ -42,6 +42,7 @@ public class PersonResourceController {
         return new PersonV1("Bob Charlie");
     }
 
+
     @GetMapping(value = "/person/param", params = "version=2")
     public PersonV2 paramV2(){
         return new PersonV2(new Name("Bob", "Charlie"));
