@@ -1,8 +1,6 @@
-package edu.miu.restful.dto;
+package edu.miu.restful.entity.dtos;
 
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
 @Data
 public class SimpleProductDto {

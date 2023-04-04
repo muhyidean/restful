@@ -1,8 +1,6 @@
-package edu.miu.restful.dto;
+package edu.miu.restful.entity.dtos;
 
 import lombok.Data;
-
-import java.time.LocalDateTime;
 
 @Data
 public class ProductDto {

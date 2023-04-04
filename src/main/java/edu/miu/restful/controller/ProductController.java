@@ -5,7 +5,9 @@ import edu.miu.restful.entity.Review;
 import edu.miu.restful.entity.dto.ProductDetailDto;
 import edu.miu.restful.entity.dto.ProductDto;
 import edu.miu.restful.service.ProductService;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.http.HttpStatus;
@@ -21,6 +23,7 @@ import java.util.Map;
 public class ProductController {
 
     private final ProductService productService;
+
 
     @Autowired
     public ProductController(ProductService productService) {
@@ -106,6 +109,12 @@ public class ProductController {
         resource.add(linkTo.withRel("all-products"));
 
         return resource;
+    }
+
+    @GetMapping("/map-test/{author}/{title}")
+    public String mapInPathVariable(@PathVariable Map<String, String> vals){
+
+        return "author: " + vals.get("author") + "   " + "title: " + vals.get("title");
     }
 
 

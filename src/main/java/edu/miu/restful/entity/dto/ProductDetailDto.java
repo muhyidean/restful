@@ -11,6 +11,5 @@ public class ProductDetailDto {
     private int id;
     private String name;
     private float price;
-
     private List<Review> reviews;
 }

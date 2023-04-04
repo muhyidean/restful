@@ -19,21 +19,16 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ProductServiceImpl implements ProductService {
 
-
-    // TODO add two slides about DTOs
-
-
     private final ProductRepo productRepo;
-
 
     @Autowired
     ModelMapper modelMapper;
 
     @Autowired
-    ListMapper<Product,ProductDto> listMapperProductToDto;
+    ListMapper listMapper;
 
     public List<ProductDto> findAll() {
-        return (List<ProductDto>) listMapperProductToDto.mapList(productRepo.findAll(),new ProductDto());}
+        return (List<ProductDto>) listMapper.mapList(productRepo.findAll(),new ProductDto());}
 
 
     public ProductDto getById(int id) {
@@ -67,10 +62,9 @@ public class ProductServiceImpl implements ProductService {
         return productRepo.getReviewByProductId(pId, reviewId);
     }
 
-
     @Override
     public List<ProductDto>findAllPriceGreaterThan(int price){
-        return (List<ProductDto>) listMapperProductToDto.mapList(productRepo.findAllPriceGreaterThan(price),new ProductDto());}
+        return (List<ProductDto>) listMapper.mapList(productRepo.findAllPriceGreaterThan(price),new ProductDto());}
 
 
 }

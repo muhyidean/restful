@@ -1,4 +1,4 @@
-package edu.miu.restful.dto;
+package edu.miu.restful.entity.dtos;
 
 import lombok.Getter;
 import lombok.Setter;
