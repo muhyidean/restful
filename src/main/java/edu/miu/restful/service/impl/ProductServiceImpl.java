@@ -28,7 +28,7 @@ public class ProductServiceImpl implements ProductService {
     ListMapper listMapper;
 
     public List<ProductDto> findAll() {
-        return (List<ProductDto>) listMapper.mapList(productRepo.findAll(),new ProductDto());}
+        return listMapper.mapList(productRepo.findAll(),new ProductDto());}
 
 
     public ProductDto getById(int id) {
@@ -43,7 +43,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public void save(ProductDto p) {
+    public void save(Product p) {
         productRepo.save(modelMapper.map(p, Product.class));
     }
 

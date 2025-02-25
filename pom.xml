@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>edu.miu</groupId>
-	<artifactId>restful</artifactId>
+	<artifactId>waa-lesson2-restful</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>restful</name>
 	<description>restful</description>
@@ -48,6 +48,11 @@
 			<groupId>org.modelmapper</groupId>
 			<artifactId>modelmapper</artifactId>
 			<version>2.4.4</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.xml.bind</groupId>
+			<artifactId>jaxb-impl</artifactId>
+			<version>2.3.1</version>
 		</dependency>
 
 

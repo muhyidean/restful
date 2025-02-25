@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class PersonResourceController {
 
     /**
-     * Twitter
+     * X
      * basic way to do versioning, mapping to different URL
      *
      * URI Versioning

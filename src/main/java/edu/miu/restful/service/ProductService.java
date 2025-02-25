@@ -16,7 +16,7 @@ public interface ProductService {
 
     ProductDetailDto getReviewsByProductId(int id);
 
-    void save(ProductDto p);
+    void save(Product p);
 
     void delete(int id);
 

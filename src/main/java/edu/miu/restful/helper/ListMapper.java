@@ -21,11 +21,11 @@ public class ListMapper<T,E> {
      * @param convertTo This is the type of class that it will convert to.
      * @return This will return a generic type holding a list of converted elements (NOTE: Downcast to the wiling type when you call the method)
      */
-    public List<?> mapList(List<T > list, E convertTo){
+    public List<?> mapList(List<T> list, E convertTo){
         return
                 list.stream()
-                .map(e -> modelMapper.map(e,convertTo.getClass()))
-                .collect(Collectors.toList());
+                    .map(e -> modelMapper.map(e,convertTo.getClass()))
+                    .collect(Collectors.toList());
     }
 
 
